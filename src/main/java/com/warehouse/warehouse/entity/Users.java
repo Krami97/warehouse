@@ -13,7 +13,8 @@ import java.util.Set;
 @NoArgsConstructor
 @Data
 public class Users {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String username;
