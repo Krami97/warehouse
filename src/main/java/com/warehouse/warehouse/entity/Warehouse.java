@@ -21,4 +21,8 @@ public class Warehouse {
 
     @OneToMany(mappedBy = "warehouse",cascade = CascadeType.ALL)
     private Set<Shelf> shelves;
+
+    public void setShelf(Shelf shelf){
+        shelves.add(shelf);
+    }
 }

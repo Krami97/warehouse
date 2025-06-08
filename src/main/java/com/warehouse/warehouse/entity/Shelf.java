@@ -17,11 +17,16 @@ public class Shelf {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(unique = true,nullable = false)
     private String name;
     @OneToMany(mappedBy = "shelf",cascade = CascadeType.ALL)
     private Set<Place> places;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name= "warehouse_id")
     private Warehouse warehouse;
+
+    public void  setPlace(Place place){
+        this.places.add(place);
+    }
 }

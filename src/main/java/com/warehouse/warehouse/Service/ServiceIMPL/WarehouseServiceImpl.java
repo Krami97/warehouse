@@ -2,17 +2,19 @@ package com.warehouse.warehouse.Service.ServiceIMPL;
 
 import com.warehouse.warehouse.Service.WarehouseService;
 import com.warehouse.warehouse.dto.WarehouseCreateDto;
+import com.warehouse.warehouse.entity.Shelf;
 import com.warehouse.warehouse.entity.Warehouse;
 import com.warehouse.warehouse.repository.WarehouseRepo;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Field;
 import java.util.List;
 
 import java.util.Map;
 import java.util.Optional;
-
+@Service
 public class WarehouseServiceImpl implements WarehouseService {
 
     @Autowired
@@ -73,4 +75,6 @@ public class WarehouseServiceImpl implements WarehouseService {
 
         return warehouseRepo.save(warehouse);
     }
+
+
 }

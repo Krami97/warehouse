@@ -32,4 +32,8 @@ public class Users {
     )
     private Set<Role> roles;
 
+    public void setRole(Role role){
+        this.roles.add(role);
+    }
+
 }

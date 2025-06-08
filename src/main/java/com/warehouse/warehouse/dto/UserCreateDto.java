@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
+
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 public class UserCreateDto {
 
-    List<String> allRoles = List.of("ROLL_USER","ROLL_ADMIN");
+    static final List<String> allRoles = List.of("ROLE_USER","ROLE_ADMIN");
     @Size(min = 4,max=32)
     String username;
     @Size(min = 8,max=32)
@@ -25,9 +25,13 @@ public class UserCreateDto {
     String role;
 
 
-    public void setRole(String role){
-        for (String Role : allRoles) {
-            if(Role)
+    public void setRole(String role)  {
+        if(allRoles.contains(role)){
+            this.role = role;
+        }else{
+            throw new IllegalArgumentException("That role dose not exist!");
         }
+
     }
 }
+

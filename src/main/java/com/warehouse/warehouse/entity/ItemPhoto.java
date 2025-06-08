@@ -14,8 +14,11 @@ public class ItemPhoto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String name;
+    private String type;
+
     @Lob// saves photo
-    private byte[] photo;
+    private byte[] data;
 
     @ManyToOne
     @JoinColumn(name = "item_id")

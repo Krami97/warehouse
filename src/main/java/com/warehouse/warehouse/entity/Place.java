@@ -16,7 +16,7 @@ public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(nullable = false,unique = true)
     private String name;
 
 
@@ -28,7 +28,7 @@ public class Place {
     )
     private Set<Item> items;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name ="shelf_id")
     private Shelf shelf;
 }

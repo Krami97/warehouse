@@ -1,6 +1,7 @@
 package com.warehouse.warehouse.Service;
 
 import com.warehouse.warehouse.dto.WarehouseCreateDto;
+import com.warehouse.warehouse.entity.Shelf;
 import com.warehouse.warehouse.entity.Warehouse;
 
 import java.util.List;
@@ -19,6 +20,8 @@ public interface WarehouseService {
     Warehouse findByName(String name);
 
     Warehouse patch(Integer id, Map<String,Object> updates);
+
+
 
 
 
