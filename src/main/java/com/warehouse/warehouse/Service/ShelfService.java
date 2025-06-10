@@ -16,7 +16,7 @@ public interface ShelfService {
 
     void delete(Integer id);
 
-    List<Shelf> get();
+    List<Shelf> getAll();
 
     Shelf findById(Integer id);
 

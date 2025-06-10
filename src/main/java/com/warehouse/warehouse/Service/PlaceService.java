@@ -13,7 +13,7 @@ public interface PlaceService {
 
     void delete(Integer id);
 
-    List<Place> get();
+    List<Place> getAll();
 
     Place findById(Integer id);
 

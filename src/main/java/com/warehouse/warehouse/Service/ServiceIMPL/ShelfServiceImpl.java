@@ -41,7 +41,7 @@ public class ShelfServiceImpl implements ShelfService {
     }
 
     @Override
-    public List<Shelf> get() {
+    public List<Shelf> getAll() {
         return List.of();
     }
 

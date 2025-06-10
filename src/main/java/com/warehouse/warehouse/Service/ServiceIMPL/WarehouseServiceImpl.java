@@ -36,7 +36,7 @@ public class WarehouseServiceImpl implements WarehouseService {
     }
 
     @Override
-    public List<Warehouse> get() {
+    public List<Warehouse> getAll() {
         return warehouseRepo.findAll();
     }
 

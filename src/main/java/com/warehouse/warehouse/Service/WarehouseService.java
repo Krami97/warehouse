@@ -13,7 +13,7 @@ public interface WarehouseService {
 
     void delete(Integer id);
 
-    List<Warehouse> get();
+    List<Warehouse> getAll();
 
     Warehouse findById(Integer id);
 
