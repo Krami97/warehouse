@@ -15,7 +15,7 @@ public interface ItemService {
 
     void delete(Integer id);
 
-    List<Item> get();
+    List<Item> getAll();
 
     Item findById(Integer id);
 

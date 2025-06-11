@@ -1,6 +1,8 @@
 package com.warehouse.warehouse.dto;
 
 import jakarta.validation.constraints.NotEmpty;
+
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -9,7 +11,7 @@ import lombok.Data;
 public class PlaceCreateDto {
 
     @NotEmpty
-    String name;
+    private String name;
     @NotEmpty
-    Integer shelfId;
+    private Integer shelfId;
 }

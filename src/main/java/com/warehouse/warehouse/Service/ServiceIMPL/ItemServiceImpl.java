@@ -40,7 +40,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public List<Item> get() {
+    public List<Item> getAll() {
         return itemRepo.findAll();
     }
 

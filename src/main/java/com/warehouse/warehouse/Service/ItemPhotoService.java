@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ItemPhotoService {
 
-    ItemPhoto create(PhotoCreateDto dto);
+    ItemPhoto create(ItemPhoto photo,Integer itemId);
 
     void delete(Integer id);
 

@@ -24,5 +24,11 @@ public class ItemPhoto {
     @JoinColumn(name = "item_id")
     private Item item;
 
+    public ItemPhoto(String name ,String type,byte[] data){
+        this.name= name;
+        this.type=type;
+        this.data=data;
+    }
+
 
 }

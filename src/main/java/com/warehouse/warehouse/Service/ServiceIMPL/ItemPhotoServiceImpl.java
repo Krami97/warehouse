@@ -22,15 +22,13 @@ public class ItemPhotoServiceImpl implements ItemPhotoService {
 
 
     @Override
-    public ItemPhoto create(PhotoCreateDto dto) {
-        ItemPhoto itemPhoto = new ItemPhoto();
-        Item item = itemService.findById(dto.getItemId());
-        itemPhoto.setItem(item);
-        itemPhoto.setType(dto.getType());
-        itemPhoto.setName(item.getName()); // set photo name same as item name
-        itemPhoto.setData(dto.getData());
+    public ItemPhoto create(ItemPhoto photo,Integer itemId) {
+        Item item = itemService.findById(itemId);
+        photo.setItem(item);
 
-        return itemPhotoRepo.save(itemPhoto);
+        photo.setName(item.getName()); // set photo name same as item name
+
+        return itemPhotoRepo.save(photo);
     }
 
     @Override

@@ -19,7 +19,7 @@ public class Shelf {
 
     @Column(unique = true,nullable = false)
     private String name;
-    @OneToMany(mappedBy = "shelf",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "shelf",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<Place> places;
 
     @ManyToOne(optional = false)

@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Users findByName(String name) {
-        Optional<Users> user = userRepo.findByName(name);
+        Optional<Users> user = userRepo.findByUsername(name);
         if(user.isEmpty()){
             throw new EntityNotFoundException("No found user with that name");
         }
