@@ -5,12 +5,12 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 import java.util.Map;
 
-public interface ControllerCRUD<T, ID, DTO> {
+public interface ControllerCRUD<ResponseDTO, ID, CreateDTO> {
 
 
-    ResponseEntity<T> create(DTO dto);
-    ResponseEntity<List<T>> getAll();
-    ResponseEntity<T> patch(ID id, Map<String,Object> updates);
-    ResponseEntity<T> get(ID id);
+    ResponseEntity<ResponseDTO> create(CreateDTO dto);
+    ResponseEntity<List<ResponseDTO>> getAll();
+    ResponseEntity<ResponseDTO> patch(ID id, Map<String,Object> updates);
+    ResponseEntity<ResponseDTO> get(ID id);
     ResponseEntity<Void> delete(ID id);
 }

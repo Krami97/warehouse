@@ -1,7 +1,7 @@
 package com.warehouse.warehouse.components;
 
-import com.warehouse.warehouse.entity.Role;
-import com.warehouse.warehouse.repository.RoleRepo;
+import com.warehouse.warehouse.auth.Role;
+import com.warehouse.warehouse.auth.RoleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
